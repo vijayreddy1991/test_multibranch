@@ -1,0 +1,13 @@
+resources:
+  - name: bb_test_jenkins
+    type: GitRepo
+    configuration:
+      gitProvider: git_bh
+      path: benharosh/test_multibranch
+      branches:
+        include: ^{{gitBranch}}$
+  - name: jenkins_reource
+    type: PropertyBag
+    configuration:
+      passing: 0
+      failing: 0

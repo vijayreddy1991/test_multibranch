@@ -1,0 +1,24 @@
+pipelines:
+  - name: test_jenkins
+    steps:
+    - name: test_app
+      type: Jenkins
+      configuration:
+        jenkinsJobName: github/test_github
+        jenkinsBranchName: {{gitBranch}}
+        buildParameters:
+            PARAM1: value1
+            PARAM2: value2
+            PARAM3: value3
+        integrations:
+          - name: jenkins
+        outputResources:
+          - name: jenkins_reource
+    - name: print_results
+      type: Bash
+      configuration:
+        inputResources:
+          - name: jenkins_reource
+      execution:
+        onExecute:
+          - printenv
