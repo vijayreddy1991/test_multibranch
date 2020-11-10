@@ -1,9 +1,9 @@
 pipeline {
     agent any
       parameters {
-        booleanParam(name: 'PARAM1', defaultValue: '', description: 'param1')
+        string(name: 'PARAM1', defaultValue: '', description: 'param1')
         string(name: 'PARAM2', defaultValue: '', description: 'param2')
-        booleanParam(name: 'PARAM3', defaultValue: '', description: 'param3')
+        string(name: 'PARAM3', defaultValue: '', description: 'param3')
       }
       stages {
         stage('build') {
