@@ -13,12 +13,12 @@ pipelines:
         integrations:
           - name: jenkins
         outputResources:
-          - name: jenkins_reource
+          - name: jenkins_reource_git
     - name: print_results
       type: Bash
       configuration:
         inputResources:
-          - name: jenkins_reource
+          - name: jenkins_reource_git
       execution:
         onExecute:
           - printenv
