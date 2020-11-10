@@ -1,7 +1,7 @@
 pipeline {
     agent any
       parameters {
-        string(name: 'PARAM1', defaultValue: '', description: 'param1')
+        string(name: 'PARAM1', defaultValue: '0', description: 'param1')
         string(name: 'PARAM2', defaultValue: '', description: 'param2')
         string(name: 'PARAM3', defaultValue: '', description: 'param3')
       }
