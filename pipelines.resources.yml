@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: vijay
-      path: vijay/test_multibranch
+      path: vijayreddy1991/test_multibranch
       branches:
         include: ^{{gitBranch}}$
   - name: jenkins_reource_git
