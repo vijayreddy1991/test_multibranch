@@ -4,7 +4,7 @@ pipelines:
     - name: test_app
       type: Jenkins
       configuration:
-        jenkinsJobName: github/test_github
+        jenkinsJobName: github/multibranch
         jenkinsBranchName: {{gitBranch}}
         buildParameters:
             PARAM1: value1
