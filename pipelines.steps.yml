@@ -18,7 +18,9 @@ pipelines:
     - name: print_results
       type: Bash
       configuration:
-        priority: 1        
+        priority: 1 
+        inputSteps:
+          - name: test_app        
         inputResources:
           - name: jenkins_reource_git
       execution:
@@ -42,6 +44,8 @@ pipelines:
     - name: print_results2
       type: Bash
       configuration:
+        inputSteps:
+          - name: test_app2
         inputResources:
           - name: jenkins_reource_git
       execution:
