@@ -9,9 +9,9 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo PARAM1 = $PARAM1'
-                sleep time: 90, unit: 'SECONDS'
+                sleep time: 2, unit: 'SECONDS'
                 sh 'echo PARAM2 = $PARAM2'
-                sleep time: 90, unit: 'SECONDS'
+                sleep time: 2, unit: 'SECONDS'
                 sh 'echo PARAM3 = $PARAM3'
                 jfPipelines()
             }
