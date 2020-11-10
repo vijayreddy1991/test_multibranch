@@ -1,5 +1,5 @@
 pipelines:
-  - name: test_jenkins
+  - name: test_jenkins_git
     steps:
     - name: test_app
       type: Jenkins
