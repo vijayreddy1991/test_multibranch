@@ -2,8 +2,8 @@ resources:
   - name: bb_test_jenkins
     type: GitRepo
     configuration:
-      gitProvider: git_bh
-      path: benharosh/test_multibranch
+      gitProvider: vijay
+      path: vijayreddy1991/test_multibranch
       branches:
         include: ^{{gitBranch}}$
   - name: jenkins_reource
