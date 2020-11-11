@@ -17,7 +17,7 @@ pipelines:
       type: Jenkins
       configuration:
         priority: 1   
-        timeoutSeconds: 1        
+#         timeoutSeconds: 1        
         jenkinsJobName: github/multibranch
         jenkinsBranchName: {{gitBranch}}
         buildParameters:
