@@ -1,6 +1,18 @@
 pipelines:
+
   - name: test_jenkins_git
     steps:
+    - name: print_results2
+      type: Bash
+#       configuration:
+#         inputSteps:
+#           - name: test_app2
+#         inputResources:
+#           - name: jenkins_reource_git
+      execution:
+        onExecute:
+          - printenv
+
     - name: test_app
       type: Jenkins
       configuration:
@@ -13,6 +25,8 @@ pipelines:
             PARAM3: value3
         integrations:
           - name: jenkins
+        inputSteps:
+          - name: print_results2          
         outputResources:
           - name: jenkins_reource_git
     - name: print_results
@@ -20,7 +34,7 @@ pipelines:
       configuration:
         priority: 2 
         inputSteps:
-          - name: test_app        
+          - name: print_results2        
         inputResources:
           - name: jenkins_reource_git
       execution:
@@ -41,6 +55,7 @@ pipelines:
 #           - name: jenkins
 #         outputResources:
 #           - name: jenkins_reource_git
+
 #     - name: print_results2
 #       type: Bash
 #       configuration:
