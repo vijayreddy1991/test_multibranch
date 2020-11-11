@@ -16,13 +16,14 @@ pipelines:
     - name: test_app
       type: Jenkins
       configuration:
-#         priority: 1     
-        jenkinsJobName: free_vijay_style
-#         jenkinsBranchName: {{gitBranch}}
-#         buildParameters:
-#             PARAM1: value1
-#             PARAM2: value2
-#             PARAM3: value3
+        priority: 1   
+        timeoutSeconds: 1        
+        jenkinsJobName: github/multibranch
+        jenkinsBranchName: {{gitBranch}}
+        buildParameters:
+            PARAM1: value1
+            PARAM2: value2
+            PARAM3: value3
         integrations:
           - name: jenkins
         inputSteps:
