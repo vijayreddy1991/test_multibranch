@@ -27,8 +27,8 @@ pipelines:
           - name: jenkins
         inputSteps:
           - name: print_results2          
-        outputResources:
-          - name: jenkins_reource_git
+#         outputResources:
+#           - name: jenkins_reource_git
     - name: print_results
       type: Bash
       configuration:
