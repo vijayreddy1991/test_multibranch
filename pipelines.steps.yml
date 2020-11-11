@@ -17,7 +17,7 @@ pipelines:
       type: Jenkins
       configuration:
 #         priority: 1     
-        jenkinsJobName: github/multibranch
+        jenkinsJobName: vijay_jenkins
         jenkinsBranchName: {{gitBranch}}
         buildParameters:
             PARAM1: value1
