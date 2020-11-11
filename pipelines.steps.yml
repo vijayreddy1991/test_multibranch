@@ -18,7 +18,7 @@ pipelines:
       configuration:
         priority: 1   
 #         timeoutSeconds: 1        
-        jenkinsJobName: github/multibranch
+        jenkinsJobName: github/job/multibranch
         jenkinsBranchName: {{gitBranch}}
         buildParameters:
             PARAM1: value1
