@@ -29,15 +29,15 @@ pipelines:
 #         inputSteps:
 #           - name: print_results2          
         outputResources:
-          - name: jenkins_reource_git
+          - name: jenkins_job_master
     - name: print_results
       type: Bash
       configuration:
         priority: 10000 
-        inputSteps:
-          - name: test_app        
+#         inputSteps:
+#           - name: test_app        
         inputResources:
-          - name: jenkins_reource_git
+          - name: jenkins_job_master
       execution:
         onExecute:
           - printenv
