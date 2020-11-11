@@ -26,8 +26,8 @@ pipelines:
             PARAM3: value3
         integrations:
           - name: jenkins
-        inputSteps:
-          - name: print_results2          
+#         inputSteps:
+#           - name: print_results2          
         outputResources:
           - name: jenkins_reource_git
     - name: print_results
@@ -35,7 +35,7 @@ pipelines:
       configuration:
         priority: 10000 
         inputSteps:
-          - name: print_results2        
+          - name: test_app        
         inputResources:
           - name: jenkins_reource_git
       execution:
