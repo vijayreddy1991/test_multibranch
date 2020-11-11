@@ -40,7 +40,18 @@ pipelines:
       execution:
         onExecute:
           - printenv
-          
+
+    - name: jfrog_jenkins_freestyle
+      type: Jenkins
+      configuration:
+        jenkinsJobName: var_freestyle_proj
+        integrations:
+          - name: jenkins
+        inputSteps:
+          - name: print_results2
+#         inputResources:
+#           - name: my_jenkins_pb
+
 #     - name: test_app2
 #       type: Jenkins
 #       configuration:
