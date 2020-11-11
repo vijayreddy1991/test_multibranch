@@ -16,8 +16,8 @@ pipelines:
     - name: test_app
       type: Jenkins
       configuration:
-        priority: 1     
-        jenkinsJobName: ghjkjkhjkhui
+#         priority: 1     
+        jenkinsJobName: github/multibranch
         jenkinsBranchName: {{gitBranch}}
         buildParameters:
             PARAM1: value1
@@ -32,7 +32,7 @@ pipelines:
     - name: print_results
       type: Bash
       configuration:
-        priority: 2 
+        priority: 10000 
         inputSteps:
           - name: print_results2        
         inputResources:
