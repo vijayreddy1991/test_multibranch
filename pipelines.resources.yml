@@ -6,7 +6,7 @@ resources:
       path: vijayreddy1991/test_multibranch
       branches:
         include: ^{{gitBranch}}$
-  - name: jenkins_reource_git
+  - name: jenkins_job_master
     type: PropertyBag
     configuration:
       passing: 0
