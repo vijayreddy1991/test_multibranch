@@ -2,16 +2,16 @@ pipelines:
 
   - name: test_jenkins_git
     steps:
-    - name: print_results2
-      type: Bash
-#       configuration:
-#         inputSteps:
-#           - name: test_app2
-#         inputResources:
-#           - name: jenkins_reource_git
-      execution:
-        onExecute:
-          - printenv
+#     - name: print_results2
+#       type: Bash
+# #       configuration:
+# #         inputSteps:
+# #           - name: test_app2
+# #         inputResources:
+# #           - name: jenkins_reource_git
+#       execution:
+#         onExecute:
+#           - printenv
 
     - name: test_app
       type: Jenkins
@@ -28,8 +28,8 @@ pipelines:
           - name: jenkins
         inputSteps:
           - name: print_results2          
-#         outputResources:
-#           - name: jenkins_reource_git
+        outputResources:
+          - name: jenkins_reource_git
     - name: print_results
       type: Bash
       configuration:
@@ -42,16 +42,16 @@ pipelines:
         onExecute:
           - printenv
 
-    - name: jfrog_jenkins_freestyle
-      type: Jenkins
-      configuration:
-        jenkinsJobName: var_freestyle_proj
-        integrations:
-          - name: jenkins
-        inputSteps:
-          - name: print_results2
-#         inputResources:
-#           - name: my_jenkins_pb
+#     - name: jfrog_jenkins_freestyle
+#       type: Jenkins
+#       configuration:
+#         jenkinsJobName: var_freestyle_proj
+#         integrations:
+#           - name: jenkins
+#         inputSteps:
+#           - name: print_results2
+# #         inputResources:
+# #           - name: my_jenkins_pb
 
 #     - name: test_app2
 #       type: Jenkins
@@ -68,13 +68,13 @@ pipelines:
 #         outputResources:
 #           - name: jenkins_reource_git
 
-#     - name: print_results2
-#       type: Bash
-#       configuration:
-#         inputSteps:
-#           - name: test_app2
-#         inputResources:
-#           - name: jenkins_reource_git
-#       execution:
-#         onExecute:
-#           - printenv
+    - name: print_results2
+      type: Bash
+      configuration:
+        inputSteps:
+          - name: test_app2
+        inputResources:
+          - name: jenkins_reource_git
+      execution:
+        onExecute:
+          - printenv
