@@ -68,13 +68,13 @@ pipelines:
 #         outputResources:
 #           - name: jenkins_reource_git
 
-    - name: print_results2
-      type: Bash
-      configuration:
-        inputSteps:
-          - name: test_app2
-        inputResources:
-          - name: jenkins_reource_git
-      execution:
-        onExecute:
-          - printenv
+#     - name: print_results2
+#       type: Bash
+#       configuration:
+#         inputSteps:
+#           - name: test_app2
+#         inputResources:
+#           - name: jenkins_reource_git
+#       execution:
+#         onExecute:
+#           - printenv
